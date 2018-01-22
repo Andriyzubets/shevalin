@@ -6,8 +6,8 @@
 	Version: 1.0
 	Author: Suave Digital
 	Website: http://suavedigital.com
-*/
-/* ------------------------------------------ */
+  */
+  /* ------------------------------------------ */
 /*             TABLE OF CONTENTS
 /* ------------------------------------------ */
 /* 01 - Global Elements
@@ -391,6 +391,14 @@ body p {
   position: relative;
   z-index: 3;
 }
+.banner .carousel .right .control .shape {
+  border-bottom: none;
+    border-left: none;
+}
+.banner .carousel .left .control .shape {
+  border-top: none;
+  border-right: none;
+}
 .banner .carousel .left .control .shape i,
 .banner .carousel .right .control .shape i {
   -webkit-transform: rotate(-45deg);
@@ -403,11 +411,11 @@ body p {
 }
 .banner .carousel .left .control .shape:hover,
 .banner .carousel .right .control .shape:hover {
-  border: 1px solid #ffffff;
+  /*border: 1px solid #ffffff;*/
 }
 .banner .carousel .left .control .shape:hover i,
 .banner .carousel .right .control .shape:hover i {
-  color: #ffffff;
+  /*color: #ffffff;*/
 }
 .banner .carousel:hover .left .control,
 .banner .carousel:hover .right .control {
@@ -526,15 +534,16 @@ body p {
   text-align: center;
   position: relative;
   z-index: 3;
+      border-top: none;
+    border-left: none;
 }
 .banner .scroll-info .shape i {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  padding: 10px;
-  font-size: 18px;
-  color: #cccccc;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-left: none;
+    position: relative;
 }
 .banner .scroll-info .shape .fa-angle-down {
   -webkit-animation-name: drop;
@@ -557,29 +566,36 @@ body p {
   }
   30% {
     top: 10px;
+    left: 10px;
     opacity: 1;
   }
   100% {
     top: 25px;
+    left: 25px;
     opacity: 0;
   }
 }
 @keyframes drop {
   0% {
     top: 5px;
+    left: -5px;
     opacity: 0;
   }
   30% {
     top: 10px;
+    left: -5px;
     opacity: 1;
   }
   100% {
     top: 25px;
+    left: 15px;
     opacity: 0;
   }
 }
 .banner .scroll-info .shape:hover {
   border: 1px solid #ffffff;
+      border-top: none;
+    border-left: none;
 }
 .banner .scroll-info .shape:hover i {
   color: #ffffff;
@@ -676,6 +692,11 @@ body p {
 /*  Latest Album */
 .latest-album {
   padding: 80px 0px;
+}
+#audio, #photo {
+    padding: 40px 0px;
+    margin: 40px 0  0;
+    background: #222;
 }
 .latest-album .intro h3 {
   margin-top: 0px;
@@ -939,6 +960,7 @@ body p {
 .about .personnel .personnel-list.owl-theme .owl-controls .owl-page:first-child {
   margin-left: -10px;
 }
+
 .about .personnel .personnel-list .shape {
   display: inline-block;
   width: 100px;
@@ -1008,6 +1030,12 @@ body p {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   text-transform: uppercase;
+}
+.owl-wrapper {
+  width: 80% !important;
+  margin: 0 auto;
+  display: flex !important;
+  justify-content: space-between;
 }
 .about .personnel .text {
   padding-top: 20px;
@@ -1242,6 +1270,70 @@ body p {
   position: relative;
   z-index: 3;
   color: #ffffff;
+}
+.partners h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+#gslider {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.partners-item {
+  width: 295px;
+  height: 295px;
+  background-size: cover;
+}
+.partners-item a {
+  display: none;
+}
+.skripka {
+  background: url(../../images/skripka.jpg) 50% 0 no-repeat;
+}
+.pizza {
+  background: url(../../images/pizza.jpg) no-repeat;
+}
+.sedokova {
+  background: url(../../images/sedokova.jpg) 50% 0 no-repeat;
+}
+.bazelevs {
+  background: url(../../images/bazalevs.jpg) 50% no-repeat;
+  background-size: 100%;
+}
+.slava-cinema {
+  background: url(../../images/slava-cinema.jpeg) 50% no-repeat;
+  background-size: 100%;
+}
+.partners-item:hover:before {
+  content: " ";
+  width: 295px;
+  height: 295px;
+  background: #F44336;
+  z-index: 9;
+  display: block;
+  opacity: 0.6;
+  position: absolute;
+  top: 19px;
+    transition: .4s;
+
+}
+.partners-item:hover a {
+  display: block;
+    z-index: 10;
+    position: relative;
+    color: #fff;
+    top: 85%;
+    text-align: center;
+    /* left: 16%; */
+    font-size: 30px;
+    text-transform: uppercase;
 }
 .news {
   padding: 80px 0px 40px;
